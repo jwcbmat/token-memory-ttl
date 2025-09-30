@@ -20,7 +20,7 @@ A clear and concise description of what you expected to happen.
 
 **Code Example**
 ```typescript
-import { MemoryTokenStore } from '@jwcbmat/token-memory-ttl';
+import { MemoryTokenStore } from '@jwcbphy/token-memory-ttl';
 
 const store = new MemoryTokenStore();
 ```

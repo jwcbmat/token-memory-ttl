@@ -31,7 +31,7 @@ Em muitas aplicações o custo de integrar um banco externo para armazenar dados
 ## Instalação
 
 ```bash
-npm install @jwcbmat/token-memory-ttl
+npm install @jwcbphy/token-memory-ttl
 ```
 
 ## Como funciona
@@ -45,7 +45,7 @@ Os timers são `unref()` quando suportado, o que significa que não impedem o en
 ### ESM/TypeScript
 
 ```ts
-import { MemoryTokenStore } from '@jwcbmat/token-memory-ttl';
+import { MemoryTokenStore } from '@jwcbphy/token-memory-ttl';
 
 const store = new MemoryTokenStore();
 await store.set('user:123', 'token', 3600);
@@ -55,7 +55,7 @@ const token = await store.get('user:123');
 ### CommonJS
 
 ```js
-const { MemoryTokenStore, tokenStore } = require('@jwcbmat/token-memory-ttl');
+const { MemoryTokenStore, tokenStore } = require('@jwcbphy/token-memory-ttl');
 
 const store = new MemoryTokenStore();
 store.set('k', 'v', 60).then(() => store.get('k'));
@@ -64,7 +64,7 @@ store.set('k', 'v', 60).then(() => store.get('k'));
 ### Instância global
 
 ```ts
-import { tokenStore } from '@jwcbmat/token-memory-ttl';
+import { tokenStore } from '@jwcbphy/token-memory-ttl';
 
 await tokenStore.set('session:abc', 'dados', 1800);
 const session = await tokenStore.get('session:abc');
@@ -164,7 +164,7 @@ MIT © [jwcbmat](https://github.com/jwcbmat)
 Links úteis:
 
 - Repositório: https://github.com/jwcbmat/token-memory-ttl
-- Pacote npm: https://www.npmjs.com/package/@jwcbmat/token-memory-ttl
+- Pacote npm: https://www.npmjs.com/package/@jwcbphy/token-memory-ttl
 - Issues: https://github.com/jwcbmat/token-memory-ttl/issues
 
 <p align="center">
