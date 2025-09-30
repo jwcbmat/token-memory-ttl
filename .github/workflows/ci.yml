@@ -23,6 +23,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: Enable WebCrypto on Node 16
+      if: matrix.node-version == '16.x'
+      run: echo "NODE_OPTIONS=--experimental-global-webcrypto" >> $GITHUB_ENV
         
     - name: Install dependencies
       run: npm ci
