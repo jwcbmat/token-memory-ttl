@@ -1,6 +1,6 @@
 {
   "name": "@jwcbmat/token-memory-ttl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "In-memory token storage with TTL (Time-To-Live) and automatic cleanup of expired entries. Minimal implementation, no external dependencies, full TypeScript support, and builds for both ESM and CommonJS.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
