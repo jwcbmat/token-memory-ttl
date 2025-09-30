@@ -24,9 +24,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - name: Enable WebCrypto on Node 16
+    - name: Enable WebCrypto and silence Vite CJS warning on Node 16
       if: matrix.node-version == '16.x'
-      run: echo "NODE_OPTIONS=--experimental-global-webcrypto" >> $GITHUB_ENV
+      run: |
+        echo "NODE_OPTIONS=--experimental-global-webcrypto" >> $GITHUB_ENV
+        echo "VITE_CJS_IGNORE_WARNING=true" >> $GITHUB_ENV
         
     - name: Install dependencies
       run: npm ci
