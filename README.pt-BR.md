@@ -25,7 +25,7 @@ Em muitas aplicações o custo de integrar um banco externo para armazenar dados
 
 ## Requisitos
 
-- Node.js >= 16
+- Node.js >= 18
 - TypeScript opcional (tipos incluídos)
 
 ## Instalação

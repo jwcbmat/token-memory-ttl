@@ -25,7 +25,7 @@ In many applications, the overhead of integrating an external database for ephem
 
 ## Requirements
 
-- Node.js >= 16
+- Node.js >= 18
 - TypeScript optional (types included)
 
 ## Installation
