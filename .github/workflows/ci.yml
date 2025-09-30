@@ -12,7 +12,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x]
     
     steps:
     - name: Checkout code
@@ -23,12 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-    - name: Enable WebCrypto and silence Vite CJS warning on Node 16
-      if: matrix.node-version == '16.x'
-      run: |
-        echo "NODE_OPTIONS=--experimental-global-webcrypto" >> $GITHUB_ENV
-        echo "VITE_CJS_IGNORE_WARNING=true" >> $GITHUB_ENV
         
     - name: Install dependencies
       run: npm ci
