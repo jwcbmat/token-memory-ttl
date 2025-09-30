@@ -1,0 +1,89 @@
+{
+  "name": "@jwcbmat/token-memory-ttl",
+  "version": "1.0.0",
+  "description": "In-memory token storage with TTL (Time-To-Live) and automatic cleanup of expired entries. Minimal implementation, no external dependencies, full TypeScript support, and builds for both ESM and CommonJS.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "README.pt-BR.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src tests --ext .ts",
+    "lint:fix": "eslint src tests --ext .ts --fix",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm run test",
+    "release": "np",
+    "example:usage": "tsx examples/usage.ts",
+    "example:benchmark": "tsx examples/benchmark.ts"
+  },
+  "keywords": [
+    "token",
+    "memory",
+    "ttl",
+    "cache",
+    "session",
+    "store",
+    "typescript",
+    "zero-dependency",
+    "high-performance",
+    "memory-safe",
+    "expiration",
+    "cleanup",
+    "auth",
+    "jwt",
+    "api-key",
+    "temporary-storage"
+  ],
+  "author": {
+    "name": "jwcbmat",
+    "email": "tr.jwcbmat@example.com",
+    "url": "https://github.com/jwcbmat"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwcbmat/token-memory-ttl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jwcbmat/token-memory-ttl/issues"
+  },
+  "homepage": "https://github.com/jwcbmat/token-memory-ttl#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/ui": "^1.0.4",
+    "eslint": "^8.56.0",
+    "np": "^9.2.0",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
+  "typescript": "~5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
