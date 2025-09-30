@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout code
@@ -42,7 +44,12 @@ jobs:
         tag_name: ${{ github.ref_name }}
         release_name: Release ${{ github.ref_name }}
         body: |
-          Changes in this Release
-          - See [CHANGELOG.md](https://github.com/jwcbmat/token-memory-ttl/blob/main/CHANGELOG.md) for details
+          **Version ${{ github.ref_name }} Published!**
+          
+          **NPM Package**: [@jwcbphy/token-memory-ttl](${{ github.ref_name }})
+          
+          **Install**: `npm install @jwcbphy/token-memory-ttl`
+          
+          **Changes**: See [CHANGELOG.md](https://github.com/jwcbmat/token-memory-ttl/blob/main/CHANGELOG.md) for details
         draft: false
         prerelease: false
